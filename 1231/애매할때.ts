@@ -13,7 +13,7 @@ let 모야이건: unknown;
 
 // let 다른변수: string = 저녁;
 
-모야이건 - 1;
+// 모야이건 - 1;
 
 let user: string = "kim";
 let age: undefined | number = undefined;
@@ -21,7 +21,7 @@ let married: boolean = false;
 let 유미: (string | number | undefined | boolean)[] = [user, age, married];
 
 let 학교: {
-    score: number[] | boolean;
+    score: number[] | boolean[];
     teacher: string;
     friend: string | string[];
 } = {
@@ -31,3 +31,4 @@ let 학교: {
 };
 학교.score[4] = false;
 학교.friend = ["Lee", 학교.teacher];
+console.log(학교);
