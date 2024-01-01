@@ -17,29 +17,53 @@ let 회원정보야: Members = {
 
 회원정보야.plusOne(1);
 
-type CutType = (x: string) => string;
+// type CutType = (x: string) => string;
 
-let cutZero: CutType = function (x) {
+// let cutZero: CutType = function (x) {
+//     let result = x.replace(/^0+/, "");
+//     return result;
+// };
+// function removeDash(x: string): number {
+//     let result = x.replace(/-/g, "");
+//     return Number(result);
+// }
+
+// type 컷제로 = (a: string) => string;
+// type 리무브대쉬 = (a: string) => number;
+// type OrganizeData = (
+//     x: string,
+//     cutZero: 컷제로,
+//     removeDash: 리무브대쉬
+// ) => void;
+// let 만들함수: OrganizeData = function (x, cutZero, removeDash) {
+//     let firstResult = cutZero(x);
+//     let secondResult = removeDash(firstResult);
+//     console.log(secondResult);
+// };
+
+// 이건 모범답안인데요
+
+type CutType = (x: string) => string;
+type 컷제로 = (a: string) => string;
+type 리무브대쉬 = (a: string) => number;
+
+const cutZero: CutType = (x) => {
     let result = x.replace(/^0+/, "");
     return result;
 };
-function removeDash(x: string): number {
+
+const removeDash: 리무브대쉬 = (x) => {
     let result = x.replace(/-/g, "");
     return Number(result);
-}
+};
 
-type 컷제로 = (a: string) => string;
-type 리무브대쉬 = (a: string) => number;
 type OrganizeData = (
     x: string,
     cutZero: 컷제로,
     removeDash: 리무브대쉬
 ) => void;
-let 만들함수: OrganizeData = function (
-    x: string,
-    cutZero: 컷제로,
-    removeDash: 리무브대쉬
-) {
+
+const 만들함수: OrganizeData = (x, cutZero, removeDash) => {
     let firstResult = cutZero(x);
     let secondResult = removeDash(firstResult);
     console.log(secondResult);

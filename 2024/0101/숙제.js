@@ -12,10 +12,10 @@ var cutZero = function (x) {
     var result = x.replace(/^0+/, "");
     return result;
 };
-function removeDash(x) {
+var removeDash = function (x) {
     var result = x.replace(/-/g, "");
     return Number(result);
-}
+};
 var 만들함수 = function (x, cutZero, removeDash) {
     var firstResult = cutZero(x);
     var secondResult = removeDash(firstResult);
