@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            class Square {
+                constructor(width, height, color) {
+                    this.width = width;
+                    this.height = height;
+                    this.color = color;
+                }
+                draw() {
+                    let a = Math.random();
+                    let square = `<div style="position:relative;
+                            top:${a * 400}px;
+                            left:${a * 400}px;
+                            width:${this.width}px;
+                            height : ${this.height}px;
+                            background:${this.color}"></div>`;
+                    document.body.insertAdjacentHTML("beforeend", square);
+                }
+            }
+
+            let 네모 = new Square(30, 30, "red");
+            네모.draw();
+            네모.draw();
+            네모.draw();
+            네모.draw();
+        </script>
+    </body>
+</html>
