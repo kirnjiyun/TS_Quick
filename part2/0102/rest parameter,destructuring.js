@@ -16,9 +16,9 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
         console.log(a);
     }
     함수(134, 5345, true, "qweiowerui");
-    var arr = [1, 2, 3];
-    var arr2 = [5, 23];
-    var arr3 = __spreadArray(__spreadArray([], arr, true), arr2, true);
+    var arr_1 = [1, 2, 3];
+    var arr2_1 = [5, 23];
+    var arr3 = __spreadArray(__spreadArray([], arr_1, true), arr2_1, true);
     console.log(arr3);
     {
         var _a = ["안녕", "나는", "지유니야"], hi = _a[0], iam = _a[1], jiyun = _a[2];
